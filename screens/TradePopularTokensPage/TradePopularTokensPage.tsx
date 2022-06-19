@@ -95,7 +95,7 @@ const TradePopularTokensPage = () => {
       );
       setRates(rates);
     });
-  });
+  }, []);
   return (
     <Layout>
       <Root>

@@ -57,6 +57,7 @@ const Body = styled(SmoothCollapse)`
   font-size: 16px;
   line-height: 24px;
   color: #363870;
+  white-space: pre-wrap;
 `;
 
 const Accordion: React.FC<IProps> = ({ title, value }) => {

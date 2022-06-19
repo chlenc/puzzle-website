@@ -49,14 +49,6 @@ const SubTitle = styled.span`
   }
 `;
 
-const items = [
-  {
-    title: "How ultra staking members get their rewards?",
-    value:
-      "The commissions collected by the aggregator (protocol fees) convert into USDN and distributed among ultra staking participants — those who blocked PUZZLE tokens and one of the NFT artifacts in a smart contract.",
-  },
-];
-
 const TitleContainer = styled(Column)`
   flex: 1;
   width: 100%;
@@ -68,6 +60,38 @@ const TitleContainer = styled(Column)`
     max-width: 300px;
   }
 `;
+
+const items = [
+  {
+    title: "What is Waves Protocol?",
+    value:
+      "Waves Tech is a global open-source platform for decentralized applications. Based on proof-of-stake consensus, Waves aspires to make the most of blockchain, with minimal carbon footprint.",
+  },
+
+  {
+    title: "How can I use the PUZZLE token?",
+    value:
+      "- staking (15% APY in USDN)\n" +
+      "- to buy artefacts\n" +
+      "- to provide liquidity to Сustom Pools\n" +
+      "- to buy & sell NFTs on Puzzle NFT Market (puzzlemarket.org)",
+  },
+  {
+    title: "How to create a wallet?",
+    value:
+      "To create a wallet, you need to go on Bitcoin Exchange | Cryptocurrency Exchange | Trading Platform | Waves and to register an account using email, seed, Ledger or Keeper Wallet.",
+  },
+  {
+    title: "What if I found a bug?",
+    value:
+      "If you encounter errors while using Puzzle Swap, you can always report a bug through this form or share them in our telegram chat by attaching a screenshot of the error.",
+  },
+  {
+    title: "How do ultra staking members get their rewards?",
+    value:
+      "The commissions collected by the aggregator (protocol fees) are converted into USDN and distributed among ultra staking participants — those who blocked PUZZLE tokens and one of the NFT artefacts in a smart contract.",
+  },
+];
 
 const Faq = () => {
   return (

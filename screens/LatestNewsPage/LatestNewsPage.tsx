@@ -4,7 +4,8 @@ import Layout from "../../components/Layout";
 import { ScrollMenu } from "react-horizontal-scrolling-menu";
 import { Row } from "../../components/Flex";
 import SizedBox from "../../components/SizedBox";
-import React, { HTMLAttributes, useContext } from "react";
+import React, { HTMLAttributes, useContext, useEffect, useState } from "react";
+import axios from "axios";
 
 const Root = styled.div`
   width: 100%;
@@ -72,31 +73,58 @@ const ArrowLeft: React.FC<IArrowProps> = (props) => (
   </Row>
 );
 
-const news = [
-  {
-    title:
-      "Prospect of puzzle price growth correlated to total liquidity present…",
-    subtitle: "May 19 • 5 min read",
-    picSrc: "/images/news1.svg",
-  },
-  {
-    title: "Introducing Puzzle Users Motivation System",
-    subtitle: "May 12 • 3 min read",
-    picSrc: "/images/news2.svg",
-  },
-  {
-    title: "Puzzle Market is LIVE",
-    subtitle: "May 5 • 3 min read",
-    picSrc: "/images/news3.svg",
-  },
-  {
-    title: "Puzzle Alert Bot: How it works",
-    subtitle: "May 5 • 3 min read",
-    picSrc: "/images/news4.svg",
-  },
-];
+type TNewsItem = {
+  title: string;
+  subtitle: string;
+  picSrc: string;
+  link: string;
+};
+
+// const news = [
+//   {
+//     title:
+//       "Prospect of puzzle price growth correlated to total liquidity present…",
+//     subtitle: "May 19 • 5 min read",
+//     picSrc: "/images/news1.svg",
+//   },
+//   {
+//     title: "Introducing Puzzle Users Motivation System",
+//     subtitle: "May 12 • 3 min read",
+//     picSrc: "/images/news2.svg",
+//   },
+//   {
+//     title: "Puzzle Market is LIVE",
+//     subtitle: "May 5 • 3 min read",
+//     picSrc: "/images/news3.svg",
+//   },
+//   {
+//     title: "Puzzle Alert Bot: How it works",
+//     subtitle: "May 5 • 3 min read",
+//     picSrc: "/images/news4.svg",
+//   },
+// ];
+
+const mediumReq =
+  "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@puzzleswap";
 
 const LatestNewsPage = () => {
+  const [news, setNews] = useState<Array<TNewsItem>>([]);
+
+  useEffect(() => {
+    axios.get(mediumReq).then(({ data }) =>
+      setNews(
+        data.items.map(
+          ({ title, pubDate: subtitle, thumbnail: picSrc, link }: any) => ({
+            title,
+            subtitle,
+            picSrc,
+            link,
+          })
+        )
+      )
+    );
+  }, []);
+
   const apiRef = React.useRef({} as any);
   const scrollNext = () => {
     apiRef.current.scrollNext();
@@ -121,7 +149,7 @@ const LatestNewsPage = () => {
           </Row>
         </TitleWrapper>
         <ScrollMenu apiRef={apiRef}>
-          {news.map((item, i) => (
+          {news?.map((item, i) => (
             <NewsItem {...item} key={i} itemId={i} />
           ))}
         </ScrollMenu>
