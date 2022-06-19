@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import Layout from "../../components/Layout";
-import { Column } from "../../components/Flex";
 import SocialButton from "./SocialButton";
 import { ParallaxBanner } from "react-scroll-parallax";
+import Link from "next/link";
 
 const Root = styled.div`
   //background: #e5e5e5;
@@ -121,11 +121,13 @@ const Community = () => {
         </Subtitle>
         <ButtonGroup>
           <SocialButton
+            onClick={() => window.open("https://t.me/puzzleswap")}
             title="Telegram"
             subtitle="Chat with the community"
             icon="/icons/telegram.svg"
           />
           <SocialButton
+            onClick={() => window.open("https://twitter.com/puzzle_swap")}
             title="Twitter"
             subtitle="Explore the latest news"
             icon="/icons/twitter.svg"

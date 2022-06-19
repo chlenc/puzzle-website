@@ -1,14 +1,15 @@
 import styled from "@emotion/styled";
 import { Column, Row } from "../../components/Flex";
-import React from "react";
+import React, { HTMLAttributes } from "react";
 
-interface IProps {
+interface IProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   subtitle: string;
   icon: string;
 }
 
 const Root = styled(Row)`
+  cursor: pointer;
   padding: 16px;
   width: 100%;
   background: #ffffff;
@@ -43,8 +44,8 @@ const SubTitle = styled.div`
   color: #8082c5;
 `;
 
-const SocialButton: React.FC<IProps> = ({ title, subtitle, icon }) => (
-  <Root>
+const SocialButton: React.FC<IProps> = ({ title, subtitle, icon, ...rest }) => (
+  <Root {...rest}>
     <IconWrapper>
       <img src={icon} alt="social" />
     </IconWrapper>
