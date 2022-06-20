@@ -3,7 +3,7 @@ import Button from "../../components/Button";
 import { Column, Row } from "../../components/Flex";
 import { jsx } from "@emotion/react";
 import JSX = jsx.JSX;
-import React, { FC } from "react";
+import React from "react";
 import { ParallaxBanner } from "react-scroll-parallax";
 
 interface IProps {
@@ -98,7 +98,7 @@ const Body = styled(Column)`
 const FeatureItem: React.FC<IProps> = (props) => {
   return (
     <Root>
-      <ItemImage layers={[{ image: props.imageSrc, speed: -15 }]} />
+      <ItemImage layers={[{ image: props.imageSrc, speed: -5 }]} />
       <BodyContainer>
         <Body>
           <Title>{props.title}</Title>

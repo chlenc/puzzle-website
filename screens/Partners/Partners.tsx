@@ -77,7 +77,7 @@ const items = [
     title: "Puzzle World",
     subtitle:
       "A virtual metaverse where users can build, own, and monetize their pieces of land",
-    button: <WorldButton>Comming soon</WorldButton>,
+    button: <WorldButton>Coming soon</WorldButton>,
     picSrc: "/images/puzzleWorld.svg",
     textColor: "#363870",
     bgColor: "#F1F2FE",
@@ -85,7 +85,7 @@ const items = [
   {
     title: "Puzzle Analytics",
     subtitle: "A dashboard for tracking your portfolio across Waves services",
-    button: <AnalyticsButton>Comming soon</AnalyticsButton>,
+    button: <AnalyticsButton>Coming soon</AnalyticsButton>,
     picSrc: "/images/puzzleAnalytics.svg",
     textColor: "#fff",
     bgColor: "#7075E9",

@@ -88,7 +88,7 @@ const StartTradingPage = () => {
         </SubTitle>
         <SizedBox height={32} />
         <Row justifyContent="center">
-          <Link href="https://puzzleswap.org/">
+          <Link href="https://app.puzzleswap.org/">
             <PrimaryButton>Launch app</PrimaryButton>
           </Link>
           <SizedBox width={12} />

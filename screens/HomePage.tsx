@@ -106,11 +106,11 @@ const HomePage = () => {
         <Subtitle>Trade tokens in multiple mega pools</Subtitle>
       </Row>
       <Row className="button-group" mainAxisSize="fit-content">
-        <Link href="https://puzzleswap.org/trade">
+        <Link href="https://app.puzzleswap.org/invest">
           <Button>Invest</Button>
         </Link>
         <SizedBox width={8} />
-        <Link href="https://puzzleswap.org/invest">
+        <Link href="https://app.puzzleswap.org/trade">
           <Button kind="secondary">Trade</Button>
         </Link>
       </Row>

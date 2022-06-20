@@ -59,8 +59,8 @@ const Root = styled.div`
 `;
 
 const links = [
-  { href: "https://puzzleswap.org/trade", label: "Trade" },
-  { href: "https://puzzleswap.org/invest", label: "Invest" },
+  { href: "https://app.puzzleswap.org/trade", label: "Trade" },
+  { href: "https://app.puzzleswap.org/invest", label: "Invest" },
   { href: "https://medium.com/@puzzleswap", label: "Blog" },
 ];
 
@@ -97,7 +97,7 @@ const Header = () => {
           src="/head/burgerIcon.svg"
           alt="burger"
         />
-        <Link href="https://puzzleswap.org">
+        <Link href="https://app.puzzleswap.org">
           <Button className="btn" size="medium">
             Launch app
           </Button>

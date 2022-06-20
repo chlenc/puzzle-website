@@ -132,7 +132,7 @@ const TradeDirectlyPage = () => {
               <PrimaryButton>Create a wallet</PrimaryButton>
             </Link>
             <SizedBox width={12} />
-            <Link href="https://puzzleswap.org/trade">
+            <Link href="https://app.puzzleswap.org/trade">
               <SecondaryButton>Start trading</SecondaryButton>
             </Link>
           </ButtonGroup>

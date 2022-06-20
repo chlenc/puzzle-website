@@ -79,7 +79,7 @@ const MobileMenu: React.FC<IProps> = ({ links, opened }) => {
           <SizedBox height={24} width={1} />
         </Body>
         <WalletWrapper>
-          <Link href="https://puzzleswap.org">
+          <Link href="https://app.puzzleswap.org">
             <Button fixed>Connect wallet</Button>
           </Link>
         </WalletWrapper>

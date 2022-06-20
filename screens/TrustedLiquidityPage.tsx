@@ -83,7 +83,7 @@ const TrustedLiquidityPage = () => {
       <Root>
         <Title>
           Trusted with <br />
-          <b>$ 6,000,000</b> of liquidity
+          <b>$ 4,000,000</b> of liquidity
         </Title>
         <Row>
           <Column style={{ flex: 1 }}>
@@ -93,7 +93,7 @@ const TrustedLiquidityPage = () => {
           <Divider />
           <Column style={{ flex: 1 }}>
             <Label>Fees earned</Label>
-            <Value>$ 768.4K</Value>
+            <Value>$ 171.4K</Value>
           </Column>
         </Row>
       </Root>

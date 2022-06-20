@@ -52,10 +52,10 @@ const linkGroups = [
   {
     title: "Products",
     links: [
-      { label: "Trade", href: "https://puzzleswap.org/trade" },
-      { label: "Invest", href: "https://puzzleswap.org/invest" },
-      { label: "Staking", href: "https://puzzleswap.org/stake" },
-      { label: "NFT Staking", href: "https://puzzleswap.org/ultrastake" },
+      { label: "Trade", href: "https://app.puzzleswap.org/trade" },
+      { label: "Invest", href: "https://app.puzzleswap.org/invest" },
+      { label: "Staking", href: "https://app.puzzleswap.org/stake" },
+      { label: "NFT Staking", href: "https://app.puzzleswap.org/ultrastake" },
       { label: "Puzzle Market", href: "https://puzzlemarket.org/" },
     ],
   },
