@@ -25,6 +25,7 @@ const Root = styled.div`
     display: none;
     max-width: 100%;
     width: 100%;
+    filter: drop-shadow(0px 40px 80px rgba(54, 56, 112, 0.24));
   }
   @media (min-width: 768px) {
     align-items: center;

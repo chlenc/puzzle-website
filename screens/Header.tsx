@@ -59,9 +59,11 @@ const Root = styled.div`
 `;
 
 const links = [
+  { href: "https://app.puzzleswap.org/explore", label: "Explore" },
   { href: "https://app.puzzleswap.org/trade", label: "Trade" },
   { href: "https://app.puzzleswap.org/invest", label: "Invest" },
   { href: "https://medium.com/@puzzleswap", label: "Blog" },
+  { href: "https://puzzlemarket.org/", label: "NFT" },
 ];
 
 const Header = () => {

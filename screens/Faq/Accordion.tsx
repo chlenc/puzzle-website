@@ -16,9 +16,14 @@ const Root = styled.div<{ expanded: boolean }>`
   padding: 24px;
   box-sizing: border-box;
   margin-bottom: 8px;
+  transition: 0.4s;
   &:hover {
     div:after {
       transform: rotate(${({ expanded }) => (expanded ? -180 : -90)}deg);
+    }
+    background: #f1f2fe;
+    & > * {
+      color: #7075e9;
     }
   }
   div:after {
