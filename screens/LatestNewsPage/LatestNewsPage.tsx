@@ -6,19 +6,23 @@ import { Row } from "../../components/Flex";
 import SizedBox from "../../components/SizedBox";
 import React, { HTMLAttributes, useContext, useEffect, useState } from "react";
 import axios from "axios";
+import dayjs from "dayjs";
 
 const Root = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 56px;
+
   .react-horizontal-scrolling-menu--wrapper {
     margin-right: -16px;
     width: calc(100% + 16px);
   }
+
   .react-horizontal-scrolling-menu--item {
     margin-right: 24px;
   }
+
   @media (min-width: 768px) {
     margin-top: 96px;
     .react-horizontal-scrolling-menu--wrapper {
@@ -113,14 +117,12 @@ const LatestNewsPage = () => {
   useEffect(() => {
     axios.get(mediumReq).then(({ data }) =>
       setNews(
-        data.items.map(
-          ({ title, pubDate: subtitle, thumbnail: picSrc, link }: any) => ({
-            title,
-            subtitle,
-            picSrc,
-            link,
-          })
-        )
+        data.items.map(({ title, pubDate, thumbnail: picSrc, link }: any) => ({
+          title,
+          subtitle: dayjs(pubDate).format("MMM DD YYYY"),
+          picSrc,
+          link,
+        }))
       )
     );
   }, []);

@@ -16,6 +16,7 @@ interface IProps
 }
 
 const Root = styled(Column)`
+  position: relative;
   width: 100%;
   padding: 40px 16px 0 16px;
   background: #363870;
@@ -95,6 +96,25 @@ const Body = styled(Column)`
   }
 `;
 
+const SmallBtnWrapper = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+const BtnWrapper = styled.div`
+  display: none;
+  @media (min-width: 768px) {
+    position: absolute;
+    display: flex;
+    bottom: 40px;
+    left: 40px;
+  }
+  @media (min-width: 1440px) {
+    bottom: 48px;
+    left: 48px;
+  }
+`;
+
 const EcosystemItem: React.FC<IProps> = ({
   bgColor,
   textColor,
@@ -110,11 +130,12 @@ const EcosystemItem: React.FC<IProps> = ({
       <Body>
         <Title style={{ color: textColor }}>{title}</Title>
         <SubTitle style={{ color: textColor }}>{subtitle}</SubTitle>
-        {button}
+        <SmallBtnWrapper> {button}</SmallBtnWrapper>
       </Body>
       <PicWrapper>
         <Pic src={picSrc} />
       </PicWrapper>
+      <BtnWrapper> {button}</BtnWrapper>
     </Root>
   );
 };
